@@ -7,8 +7,7 @@ const routerOps: ExtraOptions = {
 };
 
 const routes: Routes = [
-  { path: '', redirectTo: 'upload', pathMatch: 'full'},
-  { path: 'upload', component: UploadComponent},
+  { path: '', pathMatch: 'full', component: UploadComponent},
   { path: '**', component: UploadComponent }
 ];
 
