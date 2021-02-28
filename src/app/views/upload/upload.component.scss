@@ -1,0 +1,126 @@
+.upload-section {
+    width: 80%;
+    height: 300px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    top: 15%;
+    
+    #fileUploader {
+        opacity: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top: 20%;
+        left: 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #38424c;
+    }
+}
+
+.fileover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+  
+.files-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+
+  .single-file {
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border: dashed 1px #979797;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-grow: 1;
+    transition: all 0.3s;
+
+  }
+}
+
+.card-img-top {
+  display: inline-flex !important;
+}
+
+#firstImg {
+  width: 450px;
+  position: absolute;
+  left: 0;
+}
+#secondImg {
+  width: 450px;
+  margin-top: -70px;
+  position: absolute;
+  right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop, #secondImg {
+    display: none;
+  }
+
+  .files-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #firstImg {
+    width: 22rem;
+  }
+}
+
+@keyframes shake {
+  0% {
+      transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+      transform: translate(1px, 1px) rotate(-1deg);
+  }
+
+  20% {
+      transform: translate(1px, 1px) rotate(1deg);
+  }
+
+  30% {
+      transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  40% {
+      transform: translate(1px, 1px) rotate(1deg);
+  }
+
+  50% {
+      transform: translate(1px, 1px) rotate(-1deg);
+  }
+
+  60% {
+      transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  70% {
+      transform: translate(1px, 1px) rotate(-1deg);
+  }
+
+  80% {
+      transform: translate(1px, 1px) rotate(1deg);
+  }
+
+  90% {
+      transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
