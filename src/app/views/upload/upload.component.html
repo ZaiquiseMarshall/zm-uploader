@@ -1,13 +1,13 @@
 <section class="container">
     <img id="firstImg" src="./../../../assets/upload.png"/>
-    <section class="upload-section" appUploader (fileDropped)="onFileDropped($event)">
+    <section class="upload-section" uploaderDir (fileDropped)="onFileDropped($event)">
         <input #fileUploader id="fileUploader" type="file" multiple (change)="fileBrowseHandler($event.target.files)" />
         <h3 class="desktop">Drag and Drop File Here</h3>
         <h3 class="desktop">Or</h3>
         <label for="fileUploader" class="btn-action">Browse For File</label>
     </section>
     <div class="files-list">
-        <div class="card" *ngFor="let file of files; let i = index" style="width: 18rem;">
+        <div class="card" *ngFor="let file of files; let i = index">
             <img *ngIf="file.type.includes('image')" class="card-img-top" [src]="file.media" />
             <img *ngIf="!file.type.includes('image') && !file.type.includes('video')" class="card-img-top" src="../../../assets/file-pic.png" />
             <app-video-player *ngIf="file.type.includes('video')" class="card-img-top" [options]="{ autoplay: true, controls: true, sources: [{ src: file.media, type: 'video/mp4' }]}"></app-video-player>

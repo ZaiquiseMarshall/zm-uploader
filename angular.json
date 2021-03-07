@@ -28,14 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/jarallax/dist/jarallax.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/jarallax/dist/jarallax.min.js",
-              "node_modules/jarallax/dist/jarallax-element.min.js",
-              "node_modules/jarallax/dist/jarallax-video.min.js"
+
             ]
           },
           "configurations": {

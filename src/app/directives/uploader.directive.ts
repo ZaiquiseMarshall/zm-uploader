@@ -1,26 +1,26 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output} from '@angular/core';
 
 @Directive({
-  selector: '[appUploader]'
+  selector: '[uploaderDir]'
 })
 
 export class UploaderDirective {
   @HostBinding('class.fileover') fileOver: boolean;
   @Output() fileDropped = new EventEmitter<any>(); 
 
-  @HostListener('dragover', ['$event']) onDragOver(e) {
+ @HostListener('dragover', ['$event']) onDragOver(e) {
     e.preventDefault();
     e.stopPropagation();
     this.fileOver = true;
   }
   
-  @HostListener('dragover', ['$event']) public onDragLeave(e) {
+  @HostListener('dragleave', ['$event']) onDragLeave(e) {
     e.preventDefault();
     e.stopPropagation();
     this.fileOver = false;
   }
   
-  @HostListener('dragover', ['$event']) public ondrop(e) {
+  @HostListener('drop', ['$event']) ondrop(e) {
     e.preventDefault();
     e.stopPropagation();
     this.fileOver = false;
@@ -29,6 +29,4 @@ export class UploaderDirective {
       this.fileDropped.emit(files)
     }
   }
-
-  constructor() { }
 }
