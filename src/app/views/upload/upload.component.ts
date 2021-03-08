@@ -15,14 +15,6 @@ export class UploadComponent implements OnInit {
   ngOnInit() {
   }
 
-  onFileDropped($event) {
-    this.prepareFilesList($event);
-  }
-
-  fileBrowseHandler(files) {
-    this.prepareFilesList(files);
-  }
-
   deleteFile(index: number) {
     this.files.splice(index, 1);
   }

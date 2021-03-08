@@ -20,7 +20,7 @@ export class UploaderDirective {
     this.fileOver = false;
   }
   
-  @HostListener('drop', ['$event']) ondrop(e) {
+  @HostListener('drop', ['$event']) onDrop(e) {
     e.preventDefault();
     e.stopPropagation();
     this.fileOver = false;

@@ -1,7 +1,7 @@
 <section class="container">
     <img id="firstImg" src="./../../../assets/upload.png"/>
-    <section class="upload-section" uploaderDir (fileDropped)="onFileDropped($event)">
-        <input #fileUploader id="fileUploader" type="file" multiple (change)="fileBrowseHandler($event.target.files)" />
+    <section class="upload-section" uploaderDir (fileDropped)="prepareFilesList($event)">
+        <input #fileUploader id="fileUploader" type="file" multiple (change)="prepareFilesList($event.target.files)" />
         <h3 class="desktop">Drag and Drop File Here</h3>
         <h3 class="desktop">Or</h3>
         <label for="fileUploader" class="btn-action">Browse For File</label>
